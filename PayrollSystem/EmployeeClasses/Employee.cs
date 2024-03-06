@@ -1,11 +1,12 @@
 ﻿using System;
-namespace PayrollSystem
+namespace PayrollSystem.EmployeeClasses
 {
 	public abstract class Employee
 	{
 		public string FirstName { get; set; }
 		public string LastName { get; set; }
 		public int SINNumber { get; set; }
+		public double Pay { get; private set; }
 
 		public Employee(string firstName, string lastName, int sINNumber)
 		{
@@ -14,7 +15,7 @@ namespace PayrollSystem
 			sINNumber = SINNumber;
 		}
 
-		abstract public void CalculateSalary();
+		abstract public double CalculateSalary();
 		
 
 		

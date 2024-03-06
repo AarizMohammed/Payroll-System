@@ -1,18 +1,19 @@
 ﻿using System;
-namespace PayrollSystem
+namespace PayrollSystem.EmployeeClasses
 {
     public class CommissionEmployee : Employee
 	{
-        public double rate;
-        public int SalesAmount;
-		public CommissionEmployee(double rate, int salesAmount ) : base
+        public double Rate;
+        public int NumberOfSales;
+		public CommissionEmployee(string firstName, string lastName, int sINNumber, double rate, int numberOfSales ) : base(firstName, lastName, sINNumber)
         {
-            
+            Rate = rate;
+            NumberOfSales = numberOfSales;
 		}
 
-        public override void CalculateSalary()
+        public override double CalculateSalary()
         {
-            throw new NotImplementedException();
+            return Rate * NumberOfSales;
         }
     }
 }
