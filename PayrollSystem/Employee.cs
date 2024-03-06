@@ -1,11 +1,25 @@
 ﻿using System;
 namespace PayrollSystem
 {
-	public class Employee
+	public abstract class Employee
 	{
-		public Employee()
+		public string FirstName { get; set; }
+		public string LastName { get; set; }
+		public int SINNumber { get; set; }
+
+		public Employee(string firstName, string lastName, int sINNumber)
 		{
+			firstName = FirstName;
+			lastName = LastName;
+			sINNumber = SINNumber;
+
 		}
+
+		abstract public void CalculateSalary();
+		
+
+		
+
 	}
 }
 
