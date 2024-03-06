@@ -12,7 +12,6 @@ namespace PayrollSystem
 			firstName = FirstName;
 			lastName = LastName;
 			sINNumber = SINNumber;
-
 		}
 
 		abstract public void CalculateSalary();
